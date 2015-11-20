@@ -1,7 +1,4 @@
 {
   "name": "bash-assert",
-  "version": "0.1.0",
-  "scripts": {
-    "test": "./test/assert.sh && ./test/tassert.sh"
-  }
+  "version": "0.1.0"
 }

@@ -40,5 +40,11 @@ tend
 ```
 
 
+## Tests
+To run the tests
+
+    ./test.sh
+
+
 ## License
 [MIT](LICENSE)
