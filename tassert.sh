@@ -32,14 +32,15 @@ fi
 exec 3>&2
 
 __tassert_tap () {
-  err=$1
-  cmd="$2 $3 $4"
+  prefix=$1
+  err=$2
+  cmd="$3 $4 $5"
 
   if [ $err -lt 1 ]
   then
-    echo "ok $ASSERT_TESTS_RUN - \"$cmd\"" 1>&3
+    echo "ok $ASSERT_TESTS_RUN - [$prefix] \"$cmd\"" 1>&3
   else
-    echo "not ok $ASSERT_TESTS_RUN - \"$cmd\"" 1>&3
+    echo "not ok $ASSERT_TESTS_RUN - [$prefix] \"$cmd\"" 1>&3
   fi
 
   return $err
@@ -51,14 +52,14 @@ export ASSERT_TESTS_RUN=0;
 tassert () {
   ASSERT_TESTS_RUN=$((ASSERT_TESTS_RUN + 1));
   assert "$@"
-  __tassert_tap $? "$@"
+  __tassert_tap "assert" $? "$@"
   return $?
 }
 
 tassert_fail () {
   ASSERT_TESTS_RUN=$((ASSERT_TESTS_RUN + 1));
   assert_fail "$@" 2>&1
-  __tassert_tap $? "$@"
+  __tassert_tap "assert_fail" $? "$@"
   return $?
 }
 
