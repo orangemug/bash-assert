@@ -1,4 +1,6 @@
-source assert.sh
+#!/bin/sh
+dir="$(dirname "$0")"
+source $dir/../assert.sh
 
 set -e
 
@@ -10,3 +12,6 @@ assert_fail "foo" == "bar"
 
 assert "foo" != "bar"
 assert_fail "foo" != "foo"
+
+assert "foo bar" == "foo bar"
+assert_fail "foo bar" == "foo baz"

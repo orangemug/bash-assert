@@ -6,38 +6,36 @@ __assert ()
 
   lineno=`caller 1`
 
-  if [ $# == 2 ]
+  if [ $# != 4 ]
   then
-    cmd="$2"
-  elif [ $# == 4 ]
-  then
-    cmd="$2 $3 $4"
-  else
-    >&2 echo "ERR: assert require 1 or 3 params, got $#"
+    num=`expr $# - 1`
+    >&2 echo "ERR: assert require 3 params, got $num"
     return $E_PARAM_ERR
   fi
 
-  success="true"
+  cmd="\"$2\" $3 \"$4\""
 
-  if [ ! $cmd ]
+  if [ "$2" "$3" "$4" ]
   then
+    success="true"
+  else
     success="false"
   fi
 
   if [ "$success" != "$1" ]
   then
-    echo "Assertion failed:  \"$cmd\""
-    echo "File \"$0\", line $lineno"
+    >&2 echo "Assertion failed:  \"$cmd\""
+    >&2 echo "File \"$0\", line $lineno"
     return $E_ASSERT_FAILED
   fi
 }
 
 assert() {
-  __assert "true" $1 $2 $3;
+  __assert "true" "$@";
   return $?
 }
 
 assert_fail() {
-  __assert "false" $1 $2 $3;
+  __assert "false" "$@";
   return $?
 }

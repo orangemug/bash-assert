@@ -2,6 +2,6 @@
   "name": "bash-assert",
   "version": "0.0.0",
   "scripts": {
-    "test": "./test.sh"
+    "test": "./test/assert.sh && ./test/tassert.sh"
   }
 }
