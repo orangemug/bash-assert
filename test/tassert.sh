@@ -16,13 +16,13 @@ END
 
 stdout=`cat <<END
 # Assertion failed:  ""1" -eq "2""
-# File "./test/../tassert.sh", line 55 tassert ./test/../tassert.sh
+# File "./test/../tassert.sh", line 53 tassert ./test/../tassert.sh
 # Assertion failed:  ""foo" == "bar""
-# File "./test/../tassert.sh", line 55 tassert ./test/../tassert.sh
+# File "./test/../tassert.sh", line 53 tassert ./test/../tassert.sh
 # Assertion failed:  ""foo" != "foo""
-# File "./test/../tassert.sh", line 55 tassert ./test/../tassert.sh
+# File "./test/../tassert.sh", line 53 tassert ./test/../tassert.sh
 # Assertion failed:  ""foo bar" == "foo baz""
-# File "./test/../tassert.sh", line 55 tassert ./test/../tassert.sh
+# File "./test/../tassert.sh", line 53 tassert ./test/../tassert.sh
 `
 
 source $dir/../assert.sh

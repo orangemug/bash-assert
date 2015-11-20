@@ -10,3 +10,4 @@ tassert "foo" != "foo"
 
 tassert "foo bar" == "foo bar"
 tassert "foo bar" == "foo baz"
+tend

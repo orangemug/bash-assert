@@ -29,8 +29,6 @@ then
   exit 2
 fi
 
-tmpfile=`mktemp -t "bash-assert"`
-
 exec 3>&2
 
 __tassert_tap () {
@@ -68,7 +66,5 @@ tend () {
   echo "1..$ASSERT_TESTS_RUN" 1>&3
 }
 
-trap "rm $tmpfile" EXIT
-(cat $testfile ; echo 'tend') > $tmpfile
-source $tmpfile 2>&1 | sed -e 's/^/# /'
+source $testfile 2>&1 | sed -e 's/^/# /'
 
