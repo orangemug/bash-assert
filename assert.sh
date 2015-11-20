@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 __assert ()
 {
   E_PARAM_ERR=98

@@ -1,3 +1,4 @@
+#!/bin/bash
 dir="$(dirname "$0")"
 
 stdout="$(cat $dir/data/stdout.txt)"

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 tassert 1 -eq 1
 tassert 1 -eq 2
 
