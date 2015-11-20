@@ -19,18 +19,18 @@ First off source the library
 source assert.sh
 ```
 
-You now have a simple `assert` method which has 2 modes, as shown below
+You now have a simple `assert`/`assert_fail` methods shown below
 
 ```sh
-assert "4 -lt 5"
 assert "4" -lt "5"
+assert_fail "5" -lt "4"
 ```
 
-You'll also get a `assert_fail` is the opposite
+There is also a [tap](https://testanything.org/tap-version-13-specification.html) version, which will log out tap output for each assertion
 
 ```sh
-assert_fail "5 -lt 4"
-assert_fail "5" -lt "4"
+tassert "4" -lt "5"
+tassert_fail "5" -lt "4"
 ```
 
 
