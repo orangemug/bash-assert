@@ -16,7 +16,7 @@ Really simple bash assertion
 First off source the library
 
 ```sh
-source assert.sh
+source /path/to/assert.sh
 ```
 
 You now have a simple `assert`/`assert_fail` methods shown below
@@ -29,6 +29,7 @@ assert_fail "5" -lt "4"
 There is also a [tap](https://testanything.org/tap-version-13-specification.html) version, which will log out tap output for each assertion
 
 ```sh
+source /path/to/tassert.sh
 tassert "4" -lt "5"
 tassert_fail "5" -lt "4"
 ```
