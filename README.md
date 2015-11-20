@@ -1,12 +1,12 @@
 # bash-assert
 Really simple bash assertion
 
-[![stability-stable](https://img.shields.io/badge/stability-stable-green.svg)][stability]
+[![stability-unstable](https://img.shields.io/badge/stability-unstable-yellow.svg)][stability]
 [![circleci](https://circleci.com/gh/orangemug/bash-assert.png?style=shield)][circleci]
 [![Dependency Status](https://david-dm.org/orangemug/bash-assert.svg)][dm-prod]
 [![Dev Dependency Status](https://david-dm.org/orangemug/bash-assert/dev-status.svg)][dm-dev]
 
-[stability]: https://github.com/orangemug/stability-badges#stable
+[stability]: https://github.com/orangemug/stability-badges#unstable
 [circleci]:  https://circleci.com/gh/orangemug/bash-assert
 [dm-prod]:   https://david-dm.org/orangemug/bash-assert
 [dm-dev]:    https://david-dm.org/orangemug/bash-assert#info=devDependencies
