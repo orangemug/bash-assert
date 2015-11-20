@@ -37,6 +37,12 @@ tend
 
 ```sh
 ./tassert.sh example/tassert-simple.sh
+## >>stdout
+## TAP version 13
+## ok 1 - "4 -lt 5"
+## ok 2 - "5 -lt 4"
+## 1..2
+##<< stdout
 ```
 
 
