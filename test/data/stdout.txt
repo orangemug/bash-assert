@@ -1,0 +1,8 @@
+# Assertion failed:  ""1" -eq "2""
+# File "./test/../tassert.sh", line 54 tassert ./test/../tassert.sh
+# Assertion failed:  ""foo" == "bar""
+# File "./test/../tassert.sh", line 54 tassert ./test/../tassert.sh
+# Assertion failed:  ""foo" != "foo""
+# File "./test/../tassert.sh", line 54 tassert ./test/../tassert.sh
+# Assertion failed:  ""foo bar" == "foo baz""
+# File "./test/../tassert.sh", line 54 tassert ./test/../tassert.sh

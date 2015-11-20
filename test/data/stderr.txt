@@ -1,0 +1,10 @@
+TAP version 13
+ok 1 - [assert] "1 -eq 1"
+not ok 2 - [assert] "1 -eq 2"
+ok 3 - [assert] "foo == foo"
+not ok 4 - [assert] "foo == bar"
+ok 5 - [assert] "foo != bar"
+not ok 6 - [assert] "foo != foo"
+ok 7 - [assert] "foo bar == foo bar"
+not ok 8 - [assert] "foo bar == foo baz"
+1..8
