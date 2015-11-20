@@ -1,5 +1,7 @@
 source assert.sh
 
+set -e
+
 assert 1 -eq 1
 assert_fail 1 -eq 2
 

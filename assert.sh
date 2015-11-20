@@ -1,6 +1,4 @@
 #!/bin/sh
-set -e
-
 __assert ()
 {
   E_PARAM_ERR=98
@@ -16,7 +14,7 @@ __assert ()
     cmd="$2 $3 $4"
   else
     >&2 echo "ERR: assert require 1 or 3 params, got $#"
-    exit $E_PARAM_ERR
+    return $E_PARAM_ERR
   fi
 
   success="true"
@@ -30,14 +28,16 @@ __assert ()
   then
     echo "Assertion failed:  \"$cmd\""
     echo "File \"$0\", line $lineno"
-    exit $E_ASSERT_FAILED
+    return $E_ASSERT_FAILED
   fi
 }
 
 assert() {
   __assert "true" $1 $2 $3;
+  return $?
 }
 
 assert_fail() {
   __assert "false" $1 $2 $3;
+  return $?
 }
