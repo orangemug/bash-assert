@@ -15,13 +15,13 @@ Really simple bash assertion
 ## Usage
 First off source the library
 
-```sh
+```bash
 source ./assert.sh
 ```
 
 You now have a simple `assert`/`assert_fail` methods shown below
 
-```sh
+```bash
 assert "4" -lt "5"
 assert_fail "5" -lt "4"
 ```
@@ -35,7 +35,7 @@ tassert_fail "5" -lt "4"
 tend
 ```
 
-```sh
+```bash
 ./tassert.sh example/tassert-simple.sh
 ## >>stderr
 ## TAP version 13
@@ -49,7 +49,9 @@ tend
 ## Tests
 To run the tests
 
+```bash
     ./test.sh
+```
 
 
 ## License
