@@ -50,7 +50,7 @@ tend
 To run the tests
 
 ```bash
-    ./test.sh
+./test.sh
 ```
 
 
