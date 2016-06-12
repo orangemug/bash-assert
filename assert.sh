@@ -6,20 +6,29 @@ __assert ()
 
   lineno=`caller 1`
 
-  if [ $# != 4 ]
+  if [[ $# < 3 || $# > 4 ]]
   then
     num=`expr $# - 1`
-    >&2 echo "ERR: assert require 3 params, got $num"
+    >&2 echo "ERR: assert require 2 or 3 params, got $num"
     return $E_PARAM_ERR
   fi
 
   cmd="\"$2\" $3 \"$4\""
 
-  if [ "$2" "$3" "$4" ]
-  then
-    success="true"
+  if [ $# -eq 3 ]; then
+    if [ "$2" "$3" ]
+    then
+      success="true"
+    else
+      success="false"
+    fi
   else
-    success="false"
+    if [ "$2" "$3" "$4" ]
+    then
+      success="true"
+    else
+      success="false"
+    fi
   fi
 
   if [ "$success" != "$1" ]

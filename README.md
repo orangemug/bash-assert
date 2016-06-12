@@ -45,6 +45,8 @@ assert "4" -lt "5"
 assert_fail "5" -lt "4"
 ```
 
+Any [single bracket syntax](https://linuxacademy.com/blog/linux/conditions-in-bash-scripting-if-statements#single-bracket-syntax) expression should work correctly, you can see the tested expressions in [./test/assert.sh](test/assert.sh)
+
 There is also a [tap](https://testanything.org/tap-version-13-specification.html) version, which will log out tap output for each assertion.
 
 For `tassert` rather than using `source`, call the script directly passing the file containing the `tassert` calls. See below for an example
