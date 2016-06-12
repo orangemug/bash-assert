@@ -12,6 +12,23 @@ Really simple bash assertion
 [dm-dev]:    https://david-dm.org/orangemug/bash-assert#info=devDependencies
 
 
+## Install
+Either just grab the files `tassert.sh` and `assert.sh`
+
+Alternatively you can install via npm
+
+    npm install orangemug/bash-assert
+
+You'll need to prefix any of the below with `./node_modules/bash-assert/`, for example
+
+    source ./node_modules/bash-assert/assert.sh
+
+If you pass the `-g` flag to `npm install`, `tassert` will also be installed globally
+
+    npm install -g orangemug/bash-assert
+
+
+
 ## Usage
 First off source the library
 
@@ -23,10 +40,14 @@ You now have a simple `assert`/`assert_fail` methods shown below
 
 ```bash
 assert "4" -lt "5"
+
+# Note: This will fail
 assert_fail "5" -lt "4"
 ```
 
-There is also a [tap](https://testanything.org/tap-version-13-specification.html) version, which will log out tap output for each assertion
+There is also a [tap](https://testanything.org/tap-version-13-specification.html) version, which will log out tap output for each assertion.
+
+For `tassert` rather than using `source`, call the script directly passing the file containing the `tassert` calls. See below for an example
 
 ```text
 ## file: example/tassert-simple.sh
