@@ -3,5 +3,6 @@
   "version": "0.6.0",
   "bin": {
     "tassert": "./tassert.sh"
-  }
+  },
+  "shellMain": "./assert.sh"
 }
